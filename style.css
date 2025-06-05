@@ -1,0 +1,511 @@
+.intro {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    font-family: "fira-code", monospace;
+    z-index: 20;
+    
+}
+#overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0,1); /* semi-transparent black */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      transition: opacity 1s ease;
+    }
+
+    #overlay.hidden {
+      opacity: 0;
+      pointer-events: none; /* Allow clicks to pass through */
+    }
+.logo {
+    background-image: url(ohm.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    animation-name: logoAnimation;
+    animation-duration: 2s;
+    top: 42%;
+    left: 25%;
+    transform: translate(-50%, -30%);
+}
+@keyframes logoAnimation {
+    0% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        width: 1500px;
+        height: 1500px;
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 300px;
+        height: 300px;
+
+    }
+    100%{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 42%;
+        left: 25%;
+        transform: translate(-50%, -30%);
+
+    }
+}
+.poja {
+    font-size: 60px;
+    margin: 0;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    display: inline-block;
+    width: 700px;
+    padding-left: 120px;
+    position: absolute;
+    font-family: sans-serif;
+    font-weight: 1000;
+    animation: textFadeIn 0s 2s forwards, textAnimation 1.5s steps(19) 2s forwards;
+    text-wrap: nowrap;
+    overflow: hidden;
+    opacity: 0; /* Text is invisible before animation */
+}
+
+@keyframes textFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes textAnimation {
+    0% {
+        width: 0ch; 
+        opacity: 1;       
+    }
+    100% {
+        opacity: 1;
+        display: inline-block;
+    }
+}
+   
+
+
+
+
+
+
+
+.navbar {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    height: 50px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    border-radius: 30px; 
+    animation: navbar 1.5s ease-in-out;
+    animation-delay: 4s;
+}
+
+@keyframes navbar {
+    0% {top: -20px;}
+    100% {top: 15px;}
+}
+.icon
+{
+    position: relative;
+    right: 250px;
+}
+.about-us
+{
+    position: relative;
+    right: 150px;
+}
+.home
+{
+    position: relative;
+    right:  50px;
+}
+.login
+{
+    position: relative;
+    left: 200px;
+    
+}
+.navbar-logo {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    margin-right: 2px;
+    z-index: 11;
+}
+
+.elements {
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    font-family: "fira-code", monospace;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+
+.heading
+{
+    font-family: "fira-code", monospace;
+    position: absolute;
+    top: 100px;
+    left: 35px;
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+    animation: heading 1.5s ease-in-out;
+    animation-delay: 4s;
+}
+@keyframes heading
+{
+    0% {left: -20px;}
+    100% {left: 35px;}
+}
+a
+{
+    text-decoration: none;
+    color: white;
+    font-family: "fira-code", monospace;
+    font-size: 20px;
+    /* padding: 10px 20px; */
+    border-radius: 30px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+.ohm{
+    background-image: url(ohm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
+    z-index: 1;
+    animation: ohm 2s ease;
+    animation-delay: 4s;
+}
+@keyframes 
+ohm
+{
+    0%{
+    opacity: 0;
+    }
+    10%{
+    opacity: 0.1;
+    }
+    15%{
+    opacity: 0.15;
+    }
+    25%{
+    opacity: 0.25;
+    }
+    50%{
+    opacity: 0.5;
+    }
+    75%{
+    opacity: 0.75;
+    }
+    85%{
+    opacity: 0.85;
+    }
+    90%{
+    opacity: 0.9;
+    }
+    100%{
+    opacity: 1;
+    }
+}
+.earth{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1280px;
+    height: 740px;
+    background-image: url(earth.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+    animation: earth 1.5s ease-in-out;
+    animation-delay: 4s;
+}    
+@keyframes earth
+{
+    0% {top: 35px;}
+    100% {bottom: 0;}
+} 
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "fira-code", monospace;
+    height: auto;
+    width: 100%;
+    color: white;
+}   
+.background-video
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: 400px;
+    z-index: -1;
+    object-fit: cover;
+    pointer-events: none;
+}
+.input-container {
+    position: relative;
+    width: 350px;
+    padding: 3px;
+    left: 270px;
+    /* Space for border effect */
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.border-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    background: linear-gradient(270deg, #f22e2e, #ff00ff, #00ffff, #0033ff);
+    background-size: 600% 600%;
+    border-radius: 10px;
+    transition: opacity 0.4s ease;
+    animation-play-state: paused;
+    animation: gradientShift 6s ease infinite;
+     backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    
+}
+
+.search-input {
+    position: relative;
+    z-index: 2;
+    width: 95%;
+    height: 5px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 100px;
+    background: #252323;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #777;
+    position: relative;
+    z-index: 2;
+    font-family: "fira-code", monospace;
+}
+
+.input-container:focus-within .border-effect {
+    opacity: 1;
+    animation-play-state: running;
+    /* Start animation on focus */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Responsive Styles
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .elements {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .heading {
+        font-size: 18px;
+        left: 20px;
+    }
+
+    .ohm {
+        width: 300px;
+        height: 300px;
+    }
+
+    .earth {
+        width: 100%;
+        height: auto;
+    }
+} */
+
+
+/* 2nd silde */
+
+.second-slide
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.second-heading
+{
+    position: relative;
+    bottom: 650px;
+    left: 35px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #2a2b2b;
+    border: 2px solid white;
+    border-radius: 0px 20px 0px 20px;
+    width: 250px;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    bottom: 600px;
+    margin: 20px;
+}
+.card1
+{
+    background-image: url(https://images.unsplash.com/photo-1481234877003-b379d46b7f2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    border-radius: 0px 20px 0px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.8) contrast(1.1) saturate(1.2);
+    /* Extra box shadow for depth */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.1);
+}
+.card2
+{
+    background-image: url(https://images.unsplash.com/photo-1635680225880-54215c0292de?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    border-radius: 0px 20px 0px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.8) contrast(1.1) saturate(1.2);
+    /* Extra box shadow for depth */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.1);
+}
+.card3
+{
+    background-image: url(https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    border-radius: 0px 20px 0px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    filter: brightness(0.8) contrast(1.1) saturate(1.2);
+    /* Extra box shadow for depth */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.1);
+}
+.card h2 {
+    margin: 0 0 10px;
+    color: #ecc4c4;
+}
+
+.card p {
+    color: #666;
+}
+.card-blur
+{
+    filter: blur(10px);
+    backdrop-filter: blur(0.1px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0px 20px 0px 20px;
+    position: absolute;
+    height: 200px;
+    width: 80%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
